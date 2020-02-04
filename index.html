@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>DOM Starter Kit</title>
+    <style>
+        body {
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus vitae consectetur nisi. Vivamus ut nibh justo.
+        <span id="noun1">___________</span> eros odio, tristique eget ultricies et, lacinia sit amet neque. Donec vestibulum bibendum felis at
+        auctor. Sed sed efficitur augue. <span id="noun2">________</span> efficitur accumsan lectus, eget hendrerit mi malesuada nec. Phasellus
+        egestas massa sed massa laoreet vehicula. Orci varius natoque penatibus et magnis dis parturient montes,
+        nascetur ridiculus mus.</p>
+    <p>
+        In hac habitasse platea dictumst. Aenean eget accumsan metus, vitae scelerisque lectus. Phasellus cursus lorem
+        augue, sit amet tincidunt nulla iaculis sit amet. Vivamus iaculis sodales consectetur. Proin imperdiet odio nec
+        tellus luctus porttitor. Phasellus tristique eget dui ut convallis. Vestibulum suscipit, magna eget maximus
+        condimentum, nunc enim placerat orci, ut dapibus diam diam sed libero. In tincidunt, velit quis suscipit
+        accumsan, sapien lacus consequat arcu, vel venenatis lacus leo in quam. Aliquam euismod nibh nulla.</p>
+    <form>
+        <label>A Noun:
+            <input type="text" id="noun1Input" value="" />
+        </label>
+        <label>Another Noun:
+            <input type="text" id="noun2Input" value="" />
+        </label>
+        <button type="button" id="clickMe">Click Me</button>
+    </form>
+</body>
+<script>
+    const myButton = document.getElementById("clickMe");
+    const noun1 = document.getElementById("noun1");
+    const noun1Input = document.getElementById("noun1Input");
+
+    myButton.addEventListener('click', function (e) {
+        e.preventDefault();
+        
+        noun1.innerHTML = noun1Input.value;
+    });
+</script>
+
+</html>
